@@ -1,0 +1,112 @@
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: beige;
+}
+
+a {
+    text-decoration: none;
+}
+.info {
+    font-size: 4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: -1.5px;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: black; 
+    color: transparent;
+}
+
+/* Pop-up buttons begin */
+
+.flex-container {
+    height: 35%;
+    width: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-up-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 25%;
+    font-size: 1.7rem;
+    /* Text outline begin */
+    font-weight: 900;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: white; 
+    color: transparent;
+    /* Text outline end */
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transition: all 1.5s ease-out; /* does not work */
+}
+
+.pop-up-button:nth-child(1) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/26346/pexels-photo-26346.jpg?w=1260&h=750&auto=compress&cs=tinysrgb");
+}
+
+.pop-up-button:nth-child(2) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/50594/sea-bay-waterfront-beach-50594.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+}
+
+.pop-up-button:nth-child(3) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/261246/pexels-photo-261246.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+}
+
+.pop-up-button:nth-child(4) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/65647/sea-scotland-rest-rock-65647.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+}
+
+/* Pop-up buttons end */
+/* Pop-up second layer begin */
+
+.pop-up-overlay {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    transition: opacity 500ms;
+    visibility: hidden;
+    color: visible;
+    opacity: 1;
+}
+
+.pop-up-overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.pop-up {
+    text-align: center;
+}
+
+.pop-up p {
+    margin: 5% 10% 0 10%;
+}
+
+.pop-up a {
+    position: absolute;
+    color: white;
+    text-decoration: none;
+    font-size: 200%;
+    top: 3.5%;
+    right: 5%;
+}
+
+/* Pop-up second layer end */
